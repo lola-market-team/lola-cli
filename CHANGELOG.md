@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — unreleased
+## 0.1.0 — 2026-11-27
 
 - First public release of `@lola-market/cli`.
 - `lola login` / `logout` / `whoami`: browser-approved device-flow login.
