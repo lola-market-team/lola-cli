@@ -5,6 +5,10 @@ updates:
     schedule: { interval: weekly }
     groups:
       dev-deps: { dependency-type: development }
+    ignore:
+      # commander >=15 requires Node >=22.12; we support Node >=20.
+      - dependency-name: commander
+        update-types: [version-update:semver-major]
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
