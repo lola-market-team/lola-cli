@@ -1,0 +1,14 @@
+name: Bug report
+description: Something in the CLI or MCP server doesn't work
+labels: [bug]
+body:
+  - type: textarea
+    attributes: { label: What happened, description: "Command or MCP tool call, and the output. Remove tokens and personal data." }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: What you expected }
+  - type: input
+    attributes: { label: Version, description: "`lola --version`" }
+    validations: { required: true }
+  - type: input
+    attributes: { label: Environment, description: "OS, Node version, MCP host (Claude Code, Cursor, …)" }

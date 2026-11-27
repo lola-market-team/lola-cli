@@ -1,0 +1,57 @@
+{
+  "name": "@lola-market/cli",
+  "version": "0.1.0",
+  "description": "Connect your terminal and your AI agent to LOLA Market: a `lola` CLI and a `lola-mcp` stdio bridge to the hosted LOLA MCP server.",
+  "type": "module",
+  "bin": {
+    "lola": "./dist/bin.js",
+    "lola-mcp": "./dist/bin-mcp.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "esbuild src/bin.ts src/bin-mcp.ts --bundle --platform=node --format=esm --outdir=dist --packages=external --log-level=warning && tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run build && npm test",
+    "prepack": "rm -rf dist && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lola-market-team/lola-cli.git"
+  },
+  "homepage": "https://github.com/lola-market-team/lola-cli#readme",
+  "bugs": {
+    "url": "https://github.com/lola-market-team/lola-cli/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "keywords": [
+    "lola",
+    "marketplace",
+    "cli",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "agents"
+  ],
+  "author": "LOLA Market",
+  "license": "MIT"
+}
