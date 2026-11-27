@@ -66,6 +66,7 @@ agent can call `lola_login` and hand you the link.
 ## 🧭 From the terminal
 
 ```sh
+lola login                                    # log in through your browser
 lola whoami                                   # who am I logged in as?
 lola tools                                    # what can my account do?
 lola call browse_search '{"q":"bohrmaschine"}'
