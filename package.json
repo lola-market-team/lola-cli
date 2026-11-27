@@ -4,8 +4,8 @@
   "description": "Connect your terminal and your AI agent to LOLA Market: a `lola` CLI and a `lola-mcp` stdio bridge to the hosted LOLA MCP server.",
   "type": "module",
   "bin": {
-    "lola": "./dist/bin.js",
-    "lola-mcp": "./dist/bin-mcp.js"
+    "lola": "dist/bin.js",
+    "lola-mcp": "dist/bin-mcp.js"
   },
   "files": [
     "dist",
